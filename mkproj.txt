@@ -1,0 +1,3 @@
+[project]
+mcu=atmega88p
+f_cpu=1000000

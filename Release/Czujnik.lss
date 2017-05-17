@@ -1,0 +1,200 @@
+
+Release/Czujnik.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  0000014a  000001be  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000014a  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  000001be  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000001f0  2**2
+                  CONTENTS, READONLY
+  4 .debug_info   000005f4  00000000  00000000  0000022c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 000005a2  00000000  00000000  00000820  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   0000001a  00000000  00000000  00000dc2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_str    00000208  00000000  00000000  00000ddc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	19 c0       	rjmp	.+50     	; 0x34 <__ctors_end>
+   2:	20 c0       	rjmp	.+64     	; 0x44 <__bad_interrupt>
+   4:	1f c0       	rjmp	.+62     	; 0x44 <__bad_interrupt>
+   6:	1e c0       	rjmp	.+60     	; 0x44 <__bad_interrupt>
+   8:	1d c0       	rjmp	.+58     	; 0x44 <__bad_interrupt>
+   a:	1c c0       	rjmp	.+56     	; 0x44 <__bad_interrupt>
+   c:	1b c0       	rjmp	.+54     	; 0x44 <__bad_interrupt>
+   e:	1a c0       	rjmp	.+52     	; 0x44 <__bad_interrupt>
+  10:	19 c0       	rjmp	.+50     	; 0x44 <__bad_interrupt>
+  12:	18 c0       	rjmp	.+48     	; 0x44 <__bad_interrupt>
+  14:	17 c0       	rjmp	.+46     	; 0x44 <__bad_interrupt>
+  16:	16 c0       	rjmp	.+44     	; 0x44 <__bad_interrupt>
+  18:	15 c0       	rjmp	.+42     	; 0x44 <__bad_interrupt>
+  1a:	14 c0       	rjmp	.+40     	; 0x44 <__bad_interrupt>
+  1c:	13 c0       	rjmp	.+38     	; 0x44 <__bad_interrupt>
+  1e:	12 c0       	rjmp	.+36     	; 0x44 <__bad_interrupt>
+  20:	11 c0       	rjmp	.+34     	; 0x44 <__bad_interrupt>
+  22:	10 c0       	rjmp	.+32     	; 0x44 <__bad_interrupt>
+  24:	0f c0       	rjmp	.+30     	; 0x44 <__bad_interrupt>
+  26:	0e c0       	rjmp	.+28     	; 0x44 <__bad_interrupt>
+  28:	0d c0       	rjmp	.+26     	; 0x44 <__bad_interrupt>
+  2a:	0c c0       	rjmp	.+24     	; 0x44 <__bad_interrupt>
+  2c:	0b c0       	rjmp	.+22     	; 0x44 <__bad_interrupt>
+  2e:	0a c0       	rjmp	.+20     	; 0x44 <__bad_interrupt>
+  30:	09 c0       	rjmp	.+18     	; 0x44 <__bad_interrupt>
+  32:	08 c0       	rjmp	.+16     	; 0x44 <__bad_interrupt>
+
+00000034 <__ctors_end>:
+  34:	11 24       	eor	r1, r1
+  36:	1f be       	out	0x3f, r1	; 63
+  38:	cf ef       	ldi	r28, 0xFF	; 255
+  3a:	d4 e0       	ldi	r29, 0x04	; 4
+  3c:	de bf       	out	0x3e, r29	; 62
+  3e:	cd bf       	out	0x3d, r28	; 61
+  40:	02 d0       	rcall	.+4      	; 0x46 <main>
+  42:	81 c0       	rjmp	.+258    	; 0x146 <_exit>
+
+00000044 <__bad_interrupt>:
+  44:	dd cf       	rjmp	.-70     	; 0x0 <__vectors>
+
+00000046 <main>:
+  46:	27 d0       	rcall	.+78     	; 0x96 <MotorsInit>
+  48:	3d d0       	rcall	.+122    	; 0xc4 <SensorsInit>
+  4a:	18 b8       	out	0x08, r1	; 8
+  4c:	88 b1       	in	r24, 0x08	; 8
+  4e:	85 61       	ori	r24, 0x15	; 21
+  50:	88 b9       	out	0x08, r24	; 8
+  52:	8a b1       	in	r24, 0x0a	; 10
+  54:	8c 61       	ori	r24, 0x1C	; 28
+  56:	8a b9       	out	0x0a, r24	; 10
+  58:	23 9a       	sbi	0x04, 3	; 4
+  5a:	2b 9a       	sbi	0x05, 3	; 5
+  5c:	c2 e3       	ldi	r28, 0x32	; 50
+  5e:	d0 e0       	ldi	r29, 0x00	; 0
+  60:	84 e0       	ldi	r24, 0x04	; 4
+  62:	64 d0       	rcall	.+200    	; 0x12c <getSensorState>
+  64:	18 2f       	mov	r17, r24
+  66:	85 e0       	ldi	r24, 0x05	; 5
+  68:	61 d0       	rcall	.+194    	; 0x12c <getSensorState>
+  6a:	11 11       	cpse	r17, r1
+  6c:	02 c0       	rjmp	.+4      	; 0x72 <main+0x2c>
+  6e:	88 23       	and	r24, r24
+  70:	49 f0       	breq	.+18     	; 0x84 <main+0x3e>
+  72:	d0 93 89 00 	sts	0x0089, r29	; 0x800089 <__EEPROM_REGION_LENGTH__+0x7f0089>
+  76:	c0 93 88 00 	sts	0x0088, r28	; 0x800088 <__EEPROM_REGION_LENGTH__+0x7f0088>
+  7a:	d0 93 8b 00 	sts	0x008B, r29	; 0x80008b <__EEPROM_REGION_LENGTH__+0x7f008b>
+  7e:	c0 93 8a 00 	sts	0x008A, r28	; 0x80008a <__EEPROM_REGION_LENGTH__+0x7f008a>
+  82:	ee cf       	rjmp	.-36     	; 0x60 <main+0x1a>
+  84:	10 92 89 00 	sts	0x0089, r1	; 0x800089 <__EEPROM_REGION_LENGTH__+0x7f0089>
+  88:	10 92 88 00 	sts	0x0088, r1	; 0x800088 <__EEPROM_REGION_LENGTH__+0x7f0088>
+  8c:	10 92 8b 00 	sts	0x008B, r1	; 0x80008b <__EEPROM_REGION_LENGTH__+0x7f008b>
+  90:	10 92 8a 00 	sts	0x008A, r1	; 0x80008a <__EEPROM_REGION_LENGTH__+0x7f008a>
+  94:	e5 cf       	rjmp	.-54     	; 0x60 <main+0x1a>
+
+00000096 <MotorsInit>:
+  96:	84 b1       	in	r24, 0x04	; 4
+  98:	86 60       	ori	r24, 0x06	; 6
+  9a:	84 b9       	out	0x04, r24	; 4
+  9c:	e0 e8       	ldi	r30, 0x80	; 128
+  9e:	f0 e0       	ldi	r31, 0x00	; 0
+  a0:	80 81       	ld	r24, Z
+  a2:	80 68       	ori	r24, 0x80	; 128
+  a4:	80 83       	st	Z, r24
+  a6:	80 81       	ld	r24, Z
+  a8:	80 62       	ori	r24, 0x20	; 32
+  aa:	80 83       	st	Z, r24
+  ac:	80 81       	ld	r24, Z
+  ae:	81 60       	ori	r24, 0x01	; 1
+  b0:	80 83       	st	Z, r24
+  b2:	e1 e8       	ldi	r30, 0x81	; 129
+  b4:	f0 e0       	ldi	r31, 0x00	; 0
+  b6:	80 81       	ld	r24, Z
+  b8:	88 60       	ori	r24, 0x08	; 8
+  ba:	80 83       	st	Z, r24
+  bc:	80 81       	ld	r24, Z
+  be:	81 60       	ori	r24, 0x01	; 1
+  c0:	80 83       	st	Z, r24
+  c2:	08 95       	ret
+
+000000c4 <SensorsInit>:
+  c4:	8a b1       	in	r24, 0x0a	; 10
+  c6:	8f 71       	andi	r24, 0x1F	; 31
+  c8:	8a b9       	out	0x0a, r24	; 10
+  ca:	8b b1       	in	r24, 0x0b	; 11
+  cc:	80 6e       	ori	r24, 0xE0	; 224
+  ce:	8b b9       	out	0x0b, r24	; 11
+  d0:	84 b1       	in	r24, 0x04	; 4
+  d2:	8e 70       	andi	r24, 0x0E	; 14
+  d4:	84 b9       	out	0x04, r24	; 4
+  d6:	85 b1       	in	r24, 0x05	; 5
+  d8:	81 6f       	ori	r24, 0xF1	; 241
+  da:	85 b9       	out	0x05, r24	; 5
+  dc:	08 95       	ret
+
+000000de <getSensorsState>:
+  de:	63 b1       	in	r22, 0x03	; 3
+  e0:	83 b1       	in	r24, 0x03	; 3
+  e2:	53 b1       	in	r21, 0x03	; 3
+  e4:	43 b1       	in	r20, 0x03	; 3
+  e6:	39 b1       	in	r19, 0x09	; 9
+  e8:	29 b1       	in	r18, 0x09	; 9
+  ea:	99 b1       	in	r25, 0x09	; 9
+  ec:	73 b1       	in	r23, 0x03	; 3
+  ee:	80 71       	andi	r24, 0x10	; 16
+  f0:	86 95       	lsr	r24
+  f2:	86 95       	lsr	r24
+  f4:	86 95       	lsr	r24
+  f6:	65 fb       	bst	r22, 5
+  f8:	66 27       	eor	r22, r22
+  fa:	60 f9       	bld	r22, 0
+  fc:	86 2b       	or	r24, r22
+  fe:	50 74       	andi	r21, 0x40	; 64
+ 100:	52 95       	swap	r21
+ 102:	5f 70       	andi	r21, 0x0F	; 15
+ 104:	85 2b       	or	r24, r21
+ 106:	40 78       	andi	r20, 0x80	; 128
+ 108:	42 95       	swap	r20
+ 10a:	4f 70       	andi	r20, 0x0F	; 15
+ 10c:	84 2b       	or	r24, r20
+ 10e:	30 72       	andi	r19, 0x20	; 32
+ 110:	36 95       	lsr	r19
+ 112:	83 2b       	or	r24, r19
+ 114:	20 74       	andi	r18, 0x40	; 64
+ 116:	26 95       	lsr	r18
+ 118:	82 2b       	or	r24, r18
+ 11a:	90 78       	andi	r25, 0x80	; 128
+ 11c:	96 95       	lsr	r25
+ 11e:	89 2b       	or	r24, r25
+ 120:	90 e8       	ldi	r25, 0x80	; 128
+ 122:	79 9f       	mul	r23, r25
+ 124:	90 01       	movw	r18, r0
+ 126:	11 24       	eor	r1, r1
+ 128:	82 2b       	or	r24, r18
+ 12a:	08 95       	ret
+
+0000012c <getSensorState>:
+ 12c:	cf 93       	push	r28
+ 12e:	c8 2f       	mov	r28, r24
+ 130:	d6 df       	rcall	.-84     	; 0xde <getSensorsState>
+ 132:	c1 50       	subi	r28, 0x01	; 1
+ 134:	21 e0       	ldi	r18, 0x01	; 1
+ 136:	30 e0       	ldi	r19, 0x00	; 0
+ 138:	01 c0       	rjmp	.+2      	; 0x13c <getSensorState+0x10>
+ 13a:	22 0f       	add	r18, r18
+ 13c:	ca 95       	dec	r28
+ 13e:	ea f7       	brpl	.-6      	; 0x13a <getSensorState+0xe>
+ 140:	82 23       	and	r24, r18
+ 142:	cf 91       	pop	r28
+ 144:	08 95       	ret
+
+00000146 <_exit>:
+ 146:	f8 94       	cli
+
+00000148 <__stop_program>:
+ 148:	ff cf       	rjmp	.-2      	; 0x148 <__stop_program>
