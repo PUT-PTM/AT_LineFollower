@@ -20,6 +20,10 @@ void SensorsInit(){
     DDRB &= ~(0b11110001); //PB0,4,5,6,7 jako wejscia
     PORTB |= (0b11110001); //PB0,4,5,6,7 na stan wysoki
 
+    //Czujniki IR on/off pin
+    DDRB |= (1<<PB3);
+    PORTB |= (1<<PB3);
+
 }
 
 uint8_t getSensorsState(){

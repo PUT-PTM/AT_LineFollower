@@ -10,6 +10,11 @@
 
 
 void MotorsInit(){
+
+    //ustawienie kierunków AIN1 ...
+    PORTC = 0;
+    PORTC |= (1<<PC2) | (1<<PC4) | (1<<PC0);
+
     // PWM OC1A oraz OC1B Fast PWM 8bit
 
     //OC1A
