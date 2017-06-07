@@ -1,8 +1,8 @@
 #ifndef SENSORS_H_
 #define SENSORS_H_
 
-void SensorsInit(void);
-uint8_t getSensorsState(void);
-uint8_t getSensorState(uint8_t sensorNumber);
+void sensors_init(void);
+uint8_t get_sensors_state(void);
+uint8_t get_sensor_state(uint8_t sensorNumber);
 
 #endif
