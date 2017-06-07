@@ -1,9 +1,8 @@
 /*
  * uart.h    atmega88    F_CPU = 1000000 Hz
- *
- * Created on: 24.05.2017
- *     Author: admin
 */
+
+//NOTE: code used for debug purposes
 
 #ifndef UART_H_
 #define UART_H_
