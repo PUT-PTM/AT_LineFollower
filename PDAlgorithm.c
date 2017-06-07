@@ -37,9 +37,9 @@ void read_sensors()
  {
       SENSORS[i-1] = getSensorState(i);
       if(SENSORS[i-1]){
-           czujniki[i-1] = 'O';
+           sensors[i-1] = 'O';
       }else{
-           czujniki[i-1] = 'X';
+           sensors[i-1] = 'X';
       }
  }
 }
