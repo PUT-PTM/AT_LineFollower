@@ -1,21 +1,18 @@
 /*
  * MotorsPWM.c    atmega88p    F_CPU = 1000000 Hz
- *
- * Created on: 28.04.2017
- *     Author: admin
 */
 #include <avr/io.h>
 #include "MotorsPWM.h"
 
 
 
-void MotorsInit(){
+void motors_init(){
 
-    //ustawienie kierunków AIN1 ...
+    //setting AIN1 direction
     PORTC = 0;
     PORTC |= (1<<PC2) | (1<<PC4) | (1<<PC0);
 
-    // PWM OC1A oraz OC1B Fast PWM 8bit
+    // PWM OC1A and OC1B Fast PWM 8bit
 
     //OC1A
     DDRB |= (1<<PB1) | (1<<PB2);
@@ -24,10 +21,10 @@ void MotorsInit(){
     //OC1B
     TCCR1A |= (1<<COM1B1);
 
-    //tryb
+    //mode
     TCCR1A |= (1<<WGM10); //FAST PWM 8bit
     TCCR1B |= (1<<WGM12);
 
-    //ustawienie prescalera w timerze (uruchamianie timera)
+    //setting timer prescaler (timer running)
     TCCR1B |= (1<<CS10); //prescaler 1 = 1MHz
 }
