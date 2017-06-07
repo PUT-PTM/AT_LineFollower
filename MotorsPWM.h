@@ -1,8 +1,5 @@
 /*
  * MotorsPWM.h    atmega88p    F_CPU = 1000000 Hz
- *
- * Created on: 28.04.2017
- *     Author: admin
 */
 
 #ifndef MOTORSPWM_H_
