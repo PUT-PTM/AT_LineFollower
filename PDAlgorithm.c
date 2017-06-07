@@ -1,9 +1,6 @@
 
 /*
  * PDAlgorithm.c    atmega88p    F_CPU = 1000000 Hz
- *
- * Created on: 17.05.2017
- *     Author: admin
 */
 #include <avr/io.h>
 #include <stdlib.h>
@@ -24,8 +21,8 @@ int flag=0;
 int stop=0;
 uint8_t SENSORS[8] = {0,0,0,0,0,0,0,0};
 int WEIGHTS[8] = {-30, -25, -15, -5,5, 15, 25, 30};
-////debug
-char czujniki[9];
+
+char sensors[9];
 
 #define GLEDON   PORTD &= ~(1<<PD2);
 #define GLEDOFF  PORTD |= (1<<PD2);
@@ -34,7 +31,6 @@ char czujniki[9];
 #define RLEDON   PORTD &= ~(1<<PD4);
 #define RLEDOFF  PORTD |= (1<<PD4);
 
-////
 void read_sensors()
 {
  for(int i=1;i<=8;i++)
@@ -47,6 +43,7 @@ void read_sensors()
       }
  }
 }
+
 void get_error() {
     int actual_position = 0,active_sensors = 0,avg = 0;
 
@@ -55,16 +52,18 @@ void get_error() {
         actual_position += (SENSORS[i-1] * WEIGHTS[i-1]);
         active_sensors += SENSORS[i-1];
     }
+ 
     if(active_sensors == 0)
     {
-    stop=0;
+        stop=0;
     }
     else stop = 0;
 
 
-    if(active_sensors  != 0) {
-    avg = (actual_position / active_sensors);
-    act_err = REQ_VAL + avg;
+    if(active_sensors  != 0) 
+    {
+        avg = (actual_position / active_sensors);
+        act_err = REQ_VAL + avg;
     }
     else
     {
@@ -86,16 +85,16 @@ void get_error() {
     }
 
     if(flag == 1 && act_err <= 0)
-    flag = 0;
+        flag = 0;
     else if(flag == 2 && act_err >= 0)
-    flag = 0;
+        flag = 0;
 
     if(act_err == 40){
-      RLEDON; GLEDOFF; YLEDOFF;
+        RLEDON; GLEDOFF; YLEDOFF;
     }else if(act_err == -40){
         GLEDON; RLEDOFF; YLEDOFF;
     }else{
-       YLEDON; GLEDOFF; RLEDOFF;
+        YLEDON; GLEDOFF; RLEDOFF;
     }
 
 
@@ -113,7 +112,7 @@ int get_PD()
      return (KP*act_err + KD*dx);
 }
 
-void lets_follow()
+void follow_line()
 {
      int reg = 0;
      read_sensors();
@@ -143,8 +142,5 @@ void lets_follow()
         Mot1 = 0;
         Mot2 = 0;
      }
-     //debug
-     char buff[20];
-     itoa(reg, buff, 10);
-     USART_SendStringNL(buff);
+
 }
