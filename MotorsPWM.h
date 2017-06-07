@@ -8,6 +8,6 @@
 #define Mot1 OCR1A
 #define Mot2 OCR1B
 
-void MotorsInit(void);
+void motors_init(void);
 
 #endif  /* MOTORSPWM_H_ */
