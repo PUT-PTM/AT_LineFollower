@@ -35,7 +35,7 @@ void read_sensors()
 {
  for(int i=1;i<=8;i++)
  {
-      SENSORS[i-1] = getSensorState(i);
+      SENSORS[i-1] = get_sensor_state(i);
       if(SENSORS[i-1]){
            sensors[i-1] = 'O';
       }else{
