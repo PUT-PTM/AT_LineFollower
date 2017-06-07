@@ -17,13 +17,13 @@
 
 #define REQ_VAL 0     // Pozadana pozycja(linia przebiega po srodku listwy)
 #define KP 5          // Wzmocnienie reg P
-#define KD 0          // Wzmocnienie reg D
+#define KD 15          // Wzmocnienie reg D
 
 int prev_err,act_err=0;
 int flag=0;
 int stop=0;
 uint8_t SENSORS[8] = {0,0,0,0,0,0,0,0};
-int WEIGHTS[8] = {-30, -20, -10, -5, 5, 10, 20, 30};
+int WEIGHTS[8] = {-30, -25, -15, -5,5, 15, 25, 30};
 ////debug
 char czujniki[9];
 
@@ -62,7 +62,7 @@ void get_error() {
     else stop = 0;
 
 
-    if(active_sensors != 0) {
+    if(active_sensors  != 0) {
     avg = (actual_position / active_sensors);
     act_err = REQ_VAL + avg;
     }
@@ -70,13 +70,13 @@ void get_error() {
     {
         if(prev_err <= -5)
         {
-            act_err = -30;
+            act_err = -40;
             flag = 1;
 
         }
         else if(prev_err >= 5)
         {
-            act_err = 30;
+            act_err = 40;
             flag = 2;
 
         }
@@ -90,9 +90,9 @@ void get_error() {
     else if(flag == 2 && act_err >= 0)
     flag = 0;
 
-    if(act_err == 30){
+    if(act_err == 40){
       RLEDON; GLEDOFF; YLEDOFF;
-    }else if(act_err == -30){
+    }else if(act_err == -40){
         GLEDON; RLEDOFF; YLEDOFF;
     }else{
        YLEDON; GLEDOFF; RLEDOFF;
@@ -119,7 +119,7 @@ void lets_follow()
      read_sensors();
      get_error();
      reg = get_PD();
-     uint8_t motdefault = 150;
+     uint8_t motdefault = 255;
      if( stop == 0)
      {
          if(reg < 0)

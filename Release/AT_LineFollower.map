@@ -1,21 +1,19 @@
-Archive member included to satisfy reference by file (symbol)
+Archive member included because of file (symbol)
 
-c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_divmodhi4.o)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_divmodhi4.o)
                               Release/PDAlgorithm.o (__divmodhi4)
-c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_exit.o)
-                              c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4/crtatmega88p.o (exit)
-c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_copy_data.o)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm88p.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_copy_data.o)
                               Release/PDAlgorithm.o (__do_copy_data)
-c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_clear_bss.o)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
                               Release/PDAlgorithm.o (__do_clear_bss)
-c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_udivmodhi4.o)
-                              c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_divmodhi4.o) (__udivmodhi4)
-c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a(itoa_ncheck.o)
-                              Release/PDAlgorithm.o (__itoa_ncheck)
-c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a(utoa_ncheck.o)
-                              c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a(itoa_ncheck.o) (__utoa_common)
-c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a(strrev.o)
-                              c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a(utoa_ncheck.o) (strrev)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_udivmodhi4.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_divmodhi4.o) (__udivmodhi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(itoa.o)
+                              Release/PDAlgorithm.o (itoa)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(strrev.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(itoa.o) (strrev)
 
 Allocating common symbols
 Common symbol       size              file
@@ -29,34 +27,23 @@ Name             Origin             Length             Attributes
 text             0x00000000         0x00002000         xr
 data             0x00800060         0x0000ffa0         rw !x
 eeprom           0x00810000         0x00010000         rw !x
-fuse             0x00820000         0x00000003         rw !x
+fuse             0x00820000         0x00000400         rw !x
 lock             0x00830000         0x00000400         rw !x
 signature        0x00840000         0x00000400         rw !x
-user_signatures  0x00850000         0x00000400         rw !x
 *default*        0x00000000         0xffffffff
 
 Linker script and memory map
 
 Address of section .data set to 0x800100
-LOAD c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4/crtatmega88p.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm88p.o
 LOAD Release/main.o
 LOAD Release/MotorsPWM.o
 LOAD Release/PDAlgorithm.o
 LOAD Release/Sensors.o
 LOAD Release/uart.o
-START GROUP
-LOAD c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a
-LOAD c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libm.a
-LOAD c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a
-LOAD c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libatmega88p.a
-END GROUP
-                0x00002000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x2000
-                0x0000ffa0                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
-                0x00010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
-                [0x00000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
-                0x00000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
-                0x00000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
-                0x00000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a
 
 .hash
  *(.hash)
@@ -148,23 +135,20 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x490
+.text           0x00000000      0x54c
  *(.vectors)
- .vectors       0x00000000       0x34 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4/crtatmega88p.o
-                0x00000000                __vector_default
+ .vectors       0x00000000       0x34 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm88p.o
                 0x00000000                __vectors
+                0x00000000                __vector_default
  *(.vectors)
  *(.progmem.gcc*)
+ *(.progmem*)
                 0x00000034                . = ALIGN (0x2)
                 0x00000034                __trampolines_start = .
  *(.trampolines)
  .trampolines   0x00000034        0x0 linker stubs
  *(.trampolines*)
                 0x00000034                __trampolines_end = .
- *libprintf_flt.a:*(.progmem.data)
- *libc.a:*(.progmem.data)
- *(.progmem*)
-                0x00000034                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
@@ -178,20 +162,20 @@ END GROUP
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x00000034        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4/crtatmega88p.o
+ .init0         0x00000034        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm88p.o
                 0x00000034                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x00000034        0xc c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4/crtatmega88p.o
+ .init2         0x00000034        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm88p.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x00000040       0x16 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_copy_data.o)
+ .init4         0x00000040       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_copy_data.o)
                 0x00000040                __do_copy_data
- .init4         0x00000056       0x10 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_clear_bss.o)
+ .init4         0x00000056       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
                 0x00000056                __do_clear_bss
  *(.init4)
  *(.init5)
@@ -203,10 +187,10 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000066        0x4 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4/crtatmega88p.o
+ .init9         0x00000066        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm88p.o
  *(.init9)
  *(.text)
- .text          0x0000006a        0x2 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4/crtatmega88p.o
+ .text          0x0000006a        0x2 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm88p.o
                 0x0000006a                __vector_22
                 0x0000006a                __vector_1
                 0x0000006a                __vector_24
@@ -238,140 +222,74 @@ END GROUP
  .text          0x0000006c        0x0 Release/PDAlgorithm.o
  .text          0x0000006c        0x0 Release/Sensors.o
  .text          0x0000006c        0x0 Release/uart.o
- .text          0x0000006c        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_divmodhi4.o)
- .text          0x0000006c        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_exit.o)
- .text          0x0000006c        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_copy_data.o)
- .text          0x0000006c        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_clear_bss.o)
- .text          0x0000006c        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_udivmodhi4.o)
- .text          0x0000006c        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a(itoa_ncheck.o)
- .text          0x0000006c        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a(utoa_ncheck.o)
- .text          0x0000006c        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a(strrev.o)
+ .text          0x0000006c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_divmodhi4.o)
+ .text          0x0000006c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+ .text          0x0000006c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_copy_data.o)
+ .text          0x0000006c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
+ .text          0x0000006c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_udivmodhi4.o)
+ .text          0x0000006c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(itoa.o)
+ .text          0x0000006c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(strrev.o)
                 0x0000006c                . = ALIGN (0x2)
  *(.text.*)
- .text.startup.main
-                0x0000006c       0x14 Release/main.o
+ .text.main     0x0000006c       0x14 Release/main.o
                 0x0000006c                main
  .text.MotorsInit
                 0x00000080       0x36 Release/MotorsPWM.o
                 0x00000080                MotorsInit
- .text.read_sensors
-                0x000000b6       0x52 Release/PDAlgorithm.o
-                0x000000b6                read_sensors
  .text.get_error
-                0x00000108      0x110 Release/PDAlgorithm.o
-                0x00000108                get_error
- .text.get_PD   0x00000218       0x24 Release/PDAlgorithm.o
-                0x00000218                get_PD
+                0x000000b6      0x122 Release/PDAlgorithm.o
+                0x000000b6                get_error
+ .text.get_PD   0x000001d8       0x4a Release/PDAlgorithm.o
+                0x000001d8                get_PD
+ .text.read_sensors
+                0x00000222       0x50 Release/PDAlgorithm.o
+                0x00000222                read_sensors
  .text.lets_follow
-                0x0000023c       0x96 Release/PDAlgorithm.o
-                0x0000023c                lets_follow
+                0x00000272       0xc0 Release/PDAlgorithm.o
+                0x00000272                lets_follow
  .text.SensorsInit
-                0x000002d2       0x1e Release/Sensors.o
-                0x000002d2                SensorsInit
+                0x00000332       0x1e Release/Sensors.o
+                0x00000332                SensorsInit
  .text.getSensorsState
-                0x000002f0       0x4e Release/Sensors.o
-                0x000002f0                getSensorsState
+                0x00000350       0x96 Release/Sensors.o
+                0x00000350                getSensorsState
  .text.getSensorState
-                0x0000033e       0x1a Release/Sensors.o
-                0x0000033e                getSensorState
+                0x000003e6       0x22 Release/Sensors.o
+                0x000003e6                getSensorState
  .text.USART_Init
-                0x00000358       0x16 Release/uart.o
-                0x00000358                USART_Init
+                0x00000408       0x16 Release/uart.o
+                0x00000408                USART_Init
  .text.USART_SendChar
-                0x0000036e        0xe Release/uart.o
-                0x0000036e                USART_SendChar
+                0x0000041e       0x10 Release/uart.o
+                0x0000041e                USART_SendChar
  .text.USART_Receive
-                0x0000037c        0xe Release/uart.o
-                0x0000037c                USART_Receive
+                0x0000042e        0xe Release/uart.o
+                0x0000042e                USART_Receive
  .text.USART_SendString
-                0x0000038a       0x24 Release/uart.o
-                0x0000038a                USART_SendString
+                0x0000043c       0x22 Release/uart.o
+                0x0000043c                USART_SendString
  .text.USART_SendStringNL
-                0x000003ae       0x2a Release/uart.o
-                0x000003ae                USART_SendStringNL
- .text.libgcc.mul
-                0x000003d8        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_divmodhi4.o)
- .text.libgcc.div
-                0x000003d8       0x26 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_divmodhi4.o)
-                0x000003d8                _div
-                0x000003d8                __divmodhi4
- .text.libgcc   0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_divmodhi4.o)
- .text.libgcc.prologue
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_divmodhi4.o)
- .text.libgcc.builtins
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_divmodhi4.o)
- .text.libgcc.fmul
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_divmodhi4.o)
- .text.libgcc.fixed
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_divmodhi4.o)
- .text.libgcc.mul
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_exit.o)
- .text.libgcc.div
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_exit.o)
- .text.libgcc   0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_exit.o)
- .text.libgcc.prologue
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_exit.o)
- .text.libgcc.builtins
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_exit.o)
- .text.libgcc.fmul
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_exit.o)
- .text.libgcc.fixed
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_exit.o)
- .text.libgcc.mul
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_copy_data.o)
- .text.libgcc.div
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_copy_data.o)
- .text.libgcc   0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_copy_data.o)
- .text.libgcc.prologue
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_copy_data.o)
- .text.libgcc.builtins
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_copy_data.o)
- .text.libgcc.fmul
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_copy_data.o)
- .text.libgcc.fixed
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_copy_data.o)
- .text.libgcc.mul
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_clear_bss.o)
- .text.libgcc.div
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_clear_bss.o)
- .text.libgcc   0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_clear_bss.o)
- .text.libgcc.prologue
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_clear_bss.o)
- .text.libgcc.builtins
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_clear_bss.o)
- .text.libgcc.fmul
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_clear_bss.o)
- .text.libgcc.fixed
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_clear_bss.o)
- .text.libgcc.mul
-                0x000003fe        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_udivmodhi4.o)
- .text.libgcc.div
-                0x000003fe       0x28 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_udivmodhi4.o)
-                0x000003fe                __udivmodhi4
- .text.libgcc   0x00000426        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_udivmodhi4.o)
- .text.libgcc.prologue
-                0x00000426        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_udivmodhi4.o)
- .text.libgcc.builtins
-                0x00000426        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_udivmodhi4.o)
- .text.libgcc.fmul
-                0x00000426        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_udivmodhi4.o)
- .text.libgcc.fixed
-                0x00000426        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_udivmodhi4.o)
+                0x0000045e       0x3e Release/uart.o
+                0x0000045e                USART_SendStringNL
+ .text.libgcc   0x0000049c       0x26 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_divmodhi4.o)
+                0x0000049c                __divmodhi4
+                0x0000049c                _div
+ .text.libgcc   0x000004c2        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+ .text.libgcc   0x000004c2        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc   0x000004c2        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x000004c2       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_udivmodhi4.o)
+                0x000004c2                __udivmodhi4
  .text.avr-libc
-                0x00000426       0x14 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a(itoa_ncheck.o)
-                0x00000426                __itoa_ncheck
+                0x000004ea       0x3e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(itoa.o)
+                0x000004ea                itoa
  .text.avr-libc
-                0x0000043a       0x32 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a(utoa_ncheck.o)
-                0x0000043a                __utoa_ncheck
-                0x0000043c                __utoa_common
- .text.avr-libc
-                0x0000046c       0x20 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a(strrev.o)
-                0x0000046c                strrev
-                0x0000048c                . = ALIGN (0x2)
+                0x00000528       0x20 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(strrev.o)
+                0x00000528                strrev
+                0x00000548                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000048c        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_exit.o)
-                0x0000048c                _exit
-                0x0000048c                exit
+ .fini9         0x00000548        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+                0x00000548                exit
+                0x00000548                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -390,27 +308,26 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000048c        0x4 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_exit.o)
+ .fini0         0x00000548        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000490                _etext = .
+                0x0000054c                _etext = .
 
-.data           0x00800100       0x10 load address 0x00000490
+.data           0x00800100       0x10 load address 0x0000054c
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
- .data          0x00800100        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4/crtatmega88p.o
+ .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm88p.o
  .data          0x00800100        0x0 Release/main.o
  .data          0x00800100        0x0 Release/MotorsPWM.o
  .data          0x00800100        0x0 Release/PDAlgorithm.o
  .data          0x00800100        0x0 Release/Sensors.o
  .data          0x00800100        0x0 Release/uart.o
- .data          0x00800100        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_divmodhi4.o)
- .data          0x00800100        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_exit.o)
- .data          0x00800100        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_copy_data.o)
- .data          0x00800100        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_clear_bss.o)
- .data          0x00800100        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_udivmodhi4.o)
- .data          0x00800100        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a(itoa_ncheck.o)
- .data          0x00800100        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a(utoa_ncheck.o)
- .data          0x00800100        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a(strrev.o)
+ .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_divmodhi4.o)
+ .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+ .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_copy_data.o)
+ .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
+ .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_udivmodhi4.o)
+ .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(itoa.o)
+ .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(strrev.o)
  *(.data*)
  .data.WEIGHTS  0x00800100       0x10 Release/PDAlgorithm.o
                 0x00800100                WEIGHTS
@@ -424,43 +341,42 @@ END GROUP
 .bss            0x00800110       0x19
                 0x00800110                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x00800110        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4/crtatmega88p.o
+ .bss           0x00800110        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4/crtm88p.o
  .bss           0x00800110        0x0 Release/main.o
  .bss           0x00800110        0x0 Release/MotorsPWM.o
  .bss           0x00800110        0x0 Release/PDAlgorithm.o
  .bss           0x00800110        0x0 Release/Sensors.o
  .bss           0x00800110        0x0 Release/uart.o
- .bss           0x00800110        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_divmodhi4.o)
- .bss           0x00800110        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_exit.o)
- .bss           0x00800110        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_copy_data.o)
- .bss           0x00800110        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_clear_bss.o)
- .bss           0x00800110        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/avr4\libgcc.a(_udivmodhi4.o)
- .bss           0x00800110        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a(itoa_ncheck.o)
- .bss           0x00800110        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a(utoa_ncheck.o)
- .bss           0x00800110        0x0 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4\libc.a(strrev.o)
+ .bss           0x00800110        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_divmodhi4.o)
+ .bss           0x00800110        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_exit.o)
+ .bss           0x00800110        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_copy_data.o)
+ .bss           0x00800110        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_clear_bss.o)
+ .bss           0x00800110        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr4\libgcc.a(_udivmodhi4.o)
+ .bss           0x00800110        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(itoa.o)
+ .bss           0x00800110        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr4\libc.a(strrev.o)
  *(.bss*)
- .bss.SENSORS   0x00800110        0x8 Release/PDAlgorithm.o
-                0x00800110                SENSORS
- .bss.stop      0x00800118        0x2 Release/PDAlgorithm.o
-                0x00800118                stop
- .bss.flag      0x0080011a        0x2 Release/PDAlgorithm.o
-                0x0080011a                flag
- .bss.act_err   0x0080011c        0x2 Release/PDAlgorithm.o
-                0x0080011c                act_err
+ .bss.act_err   0x00800110        0x2 Release/PDAlgorithm.o
+                0x00800110                act_err
+ .bss.flag      0x00800112        0x2 Release/PDAlgorithm.o
+                0x00800112                flag
+ .bss.stop      0x00800114        0x2 Release/PDAlgorithm.o
+                0x00800114                stop
+ .bss.SENSORS   0x00800116        0x8 Release/PDAlgorithm.o
+                0x00800116                SENSORS
  *(COMMON)
  COMMON         0x0080011e        0xb Release/PDAlgorithm.o
                 0x0080011e                czujniki
                 0x00800127                prev_err
                 0x00800129                PROVIDE (__bss_end, .)
-                0x00000490                __data_load_start = LOADADDR (.data)
-                0x000004a0                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0000054c                __data_load_start = LOADADDR (.data)
+                0x0000055c                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800129        0x0
-                [!provide]                PROVIDE (__noinit_start, .)
+                0x00800129                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                [!provide]                PROVIDE (__noinit_end, .)
+                0x00800129                PROVIDE (__noinit_end, .)
                 0x00800129                _end = .
-                [!provide]                PROVIDE (__heap_start, .)
+                0x00800129                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -477,9 +393,6 @@ END GROUP
 
 .signature
  *(.signature*)
-
-.user_signatures
- *(.user_signatures*)
 
 .stab
  *(.stab)
@@ -499,22 +412,8 @@ END GROUP
 .stab.indexstr
  *(.stab.indexstr)
 
-.comment        0x00000000       0x30
+.comment
  *(.comment)
- .comment       0x00000000       0x30 Release/main.o
-                                 0x31 (size before relaxing)
- .comment       0x00000030       0x31 Release/MotorsPWM.o
- .comment       0x00000030       0x31 Release/PDAlgorithm.o
- .comment       0x00000030       0x31 Release/Sensors.o
- .comment       0x00000030       0x31 Release/uart.o
-
-.note.gnu.avr.deviceinfo
-                0x00000000       0x3c
- .note.gnu.avr.deviceinfo
-                0x00000000       0x3c c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4/crtatmega88p.o
-
-.note.gnu.build-id
- *(.note.gnu.build-id)
 
 .debug
  *(.debug)
@@ -534,50 +433,26 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0x5f4
- *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x5f4 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4/crtatmega88p.o
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
 
-.debug_abbrev   0x00000000      0x5a2
+.debug_abbrev
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x5a2 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4/crtatmega88p.o
 
-.debug_line     0x00000000       0x1a
- *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x00000000       0x1a c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4/crtatmega88p.o
+.debug_line
+ *(.debug_line)
 
 .debug_frame
  *(.debug_frame)
 
-.debug_str      0x00000000      0x208
+.debug_str
  *(.debug_str)
- .debug_str     0x00000000      0x208 c:/users/micha/onedrive/dokumenty/mkclipse/avr toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avr4/crtatmega88p.o
 
 .debug_loc
  *(.debug_loc)
 
 .debug_macinfo
  *(.debug_macinfo)
-
-.debug_weaknames
- *(.debug_weaknames)
-
-.debug_funcnames
- *(.debug_funcnames)
-
-.debug_typenames
- *(.debug_typenames)
-
-.debug_varnames
- *(.debug_varnames)
-
-.debug_pubtypes
- *(.debug_pubtypes)
-
-.debug_ranges
- *(.debug_ranges)
-
-.debug_macro
- *(.debug_macro)
 OUTPUT(Release/AT_LineFollower.elf elf32-avr)
 LOAD linker stubs

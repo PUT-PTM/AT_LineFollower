@@ -1,4 +1,4 @@
-#include <avr/io.h>
+    #include <avr/io.h>
 #include "Sensors.h"
 
  /*
@@ -57,5 +57,12 @@ uint8_t getSensorState(uint8_t sensorNumber){
     */
 
     uint8_t state = getSensorsState();
-    return state & (1<<(sensorNumber-1));
+
+    if(state & (1<<(sensorNumber-1))){
+         return 1;
+    }else{
+         return 0;
+    }
+
+    return 0;
 }
