@@ -1,38 +1,32 @@
-    #include <avr/io.h>
+#include <avr/io.h>
 #include "Sensors.h"
 
- /*
- * Czujniki pod³¹czone wed³ug schematu
- * https://easyeda.com/agedee34/LineFollower_PTM-ebb706302d924e61a77a70f42d5fbbeb
- */
-
-
-void SensorsInit(){
+void sensors_init(){
 
     /*
-    * Inicjalizacja: Ustawienie odpowiednich pinów jako wejœcia
-    * oraz ustawienie ich w stan wysoki
+    * Initialization: Setting proper pins as inputs
+    * and setting them into high logical value
     */
 
-    DDRD &= ~(0b11100000); //PB5,6,7 jako wejscia
-    PORTD |= (0b11100000); //PD5,6,7 na stan wysoki
+    DDRD &= ~(0b11100000);
+    PORTD |= (0b11100000);
 
-    DDRB &= ~(0b11110001); //PB0,4,5,6,7 jako wejscia
-    PORTB |= (0b11110001); //PB0,4,5,6,7 na stan wysoki
+    DDRB &= ~(0b11110001);
+    PORTB |= (0b11110001);
 
-    //Czujniki IR on/off pin
+    //IR sensors on/off pin
     DDRB |= (1<<PB3);
     PORTB |= (1<<PB3);
 
 }
 
-uint8_t getSensorsState(){
+uint8_t get_sensors_state(){
     /*
-    * Zwraca stan czujników jako jeden bajt.
-    * Czujnik 1 - bajt 0  (najm³odszy bit)
-    * Czujnik 2 - bajt 1
+    * Returns sensors state as one byte.
+    * Sensor 1 - bit 0  (youngest bit)
+    * Sensor 2 - bit 1
     * itd
-    * Czujnik 8 - bajt 7  (najstarszy bit)
+    * Sensor 8 - bit 7  (oldest bit)
     */
 
      uint8_t state = 0;
@@ -49,11 +43,11 @@ uint8_t getSensorsState(){
      return state;
 }
 
-uint8_t getSensorState(uint8_t sensorNumber){
+uint8_t get_sensor_state(uint8_t sensorNumber){
 
     /*
-    * Zwraca stan danego czujnika jako 0 lub nie-zero
-    * Czujniki 1 do 8
+    * Resturns sesnors state (as zero or non-zero)
+    * Sensors numbered from 1-8
     */
 
     uint8_t state = getSensorsState();
