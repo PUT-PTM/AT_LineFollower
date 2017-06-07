@@ -13,4 +13,4 @@
 
 void ADCInit(void);
 
-#endif  /* ADC_H_ */
+#endif
