@@ -1,6 +1,8 @@
 #include <avr/io.h>
 #include "uart.h"
 
+//NOTE: Code used for debug purposes
+
 void USART_Init(uint8_t ubrr)
 {
 
