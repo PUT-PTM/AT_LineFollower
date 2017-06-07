@@ -6,24 +6,23 @@
 #include "MotorsPWM.h"
 #include "PDAlgorithm.h"
 
-#include "uart.h"
+#include "uart.h" //debug purposes
 
 
 int main(void){
 
-    MotorsInit();
-    SensorsInit();
+    motors_init();
+    sensors_init();
     USART_Init(12);     //baud 4800 0.2% error
 
-    sei(); //w³¹czenie przerwañ
+    sei(); //built-in, turning interrupts
 
-    //3 diody
+    //Diodes (sygnalizing turning direction)
     DDRD |= (1<<PD2) | (1<<PD3) | (1<<PD4);
-    //
 
     while(1)
     {
-        lets_follow();
+        follow_line();
     }
 
 
